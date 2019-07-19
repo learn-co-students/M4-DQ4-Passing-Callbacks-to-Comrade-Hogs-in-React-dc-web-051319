@@ -9,8 +9,8 @@ export default class Pig extends React.Component {
 
   render() {
     return(
-      <div id={this.props.name} className="sheeple">
-        {null}
+      <div  id={this.props.name} className="sheeple">
+        {(this.props.environment === 'inhospitable') ? this.panic() : null}
       </div>
     )
   }
