@@ -21,8 +21,7 @@ export default class PigPen extends React.Component {
   }
 
   relax = () => {
-    const newState = {environment: 'docile'}
-    this.setState(newState)
+    this.setState({environment: 'docile'})
   }
 
   alterEnvironment = (vibe) => {
@@ -30,7 +29,9 @@ export default class PigPen extends React.Component {
       this.audio.play()
     const newState = {environment: vibe}
     this.setState(newState)
+    setTimeout(this.relax, 2000)
   }
+
 
   generateSheeple = () => {
     return pigs.map((name, idx) => (
